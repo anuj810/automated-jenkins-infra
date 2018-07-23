@@ -1,0 +1,1511 @@
+[0m[1maws_instance.slave: Refreshing state... (ID: i-043b3fdcba40df984)[0m
+[0m[1maws_instance.slave: Creating...[0m
+  ami:                                       "" => "ami-2d39803a"
+  associate_public_ip_address:               "" => "<computed>"
+  availability_zone:                         "" => "<computed>"
+  ebs_block_device.#:                        "" => "<computed>"
+  ephemeral_block_device.#:                  "" => "<computed>"
+  get_password_data:                         "" => "false"
+  instance_state:                            "" => "<computed>"
+  instance_type:                             "" => "t2.micro"
+  ipv6_address_count:                        "" => "<computed>"
+  ipv6_addresses.#:                          "" => "<computed>"
+  key_name:                                  "" => "instance-key"
+  network_interface.#:                       "" => "<computed>"
+  network_interface_id:                      "" => "<computed>"
+  password_data:                             "" => "<computed>"
+  placement_group:                           "" => "<computed>"
+  primary_network_interface_id:              "" => "<computed>"
+  private_dns:                               "" => "<computed>"
+  private_ip:                                "" => "<computed>"
+  public_dns:                                "" => "<computed>"
+  public_ip:                                 "" => "<computed>"
+  root_block_device.#:                       "" => "1"
+  root_block_device.0.delete_on_termination: "" => "true"
+  root_block_device.0.volume_id:             "" => "<computed>"
+  root_block_device.0.volume_size:           "" => "30"
+  root_block_device.0.volume_type:           "" => "<computed>"
+  security_groups.#:                         "" => "<computed>"
+  source_dest_check:                         "" => "true"
+  subnet_id:                                 "" => "<computed>"
+  tenancy:                                   "" => "<computed>"
+  volume_tags.%:                             "" => "<computed>"
+  vpc_security_group_ids.#:                  "" => "<computed>"[0m
+[0m[1maws_instance.slave: Still creating... (10s elapsed)[0m[0m
+[0m[1maws_instance.slave: Still creating... (20s elapsed)[0m[0m
+[0m[1maws_instance.slave: Provisioning with 'file'...[0m[0m
+[0m[1maws_instance.slave: Still creating... (30s elapsed)[0m[0m
+[0m[1maws_instance.slave: Still creating... (40s elapsed)[0m[0m
+[0m[1maws_instance.slave: Provisioning with 'remote-exec'...[0m[0m
+[0m[0maws_instance.slave (remote-exec): Connecting to remote host via SSH...
+aws_instance.slave (remote-exec):   Host: 18.233.8.147
+aws_instance.slave (remote-exec):   User: ubuntu
+aws_instance.slave (remote-exec):   Password: false
+aws_instance.slave (remote-exec):   Private key: true
+aws_instance.slave (remote-exec):   SSH Agent: false
+aws_instance.slave (remote-exec):   Checking Host Key: false
+[0m[0maws_instance.slave (remote-exec): Connected!
+[0m[0maws_instance.slave (remote-exec): # Executing docker install script, commit: 36b78b2
+[0m[0maws_instance.slave (remote-exec): + sudo -E sh -c 'apt-get update -qq >/dev/null'
+[0m[1maws_instance.slave: Still creating... (50s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): + sudo -E sh -c 'apt-get install -y -qq apt-transport-https ca-certificates curl >/dev/null'
+[0m[1maws_instance.slave: Still creating... (1m0s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): + sudo -E sh -c 'curl -fsSL "https://download.docker.com/linux/ubuntu/gpg" | apt-key add -qq - >/dev/null'
+[0m[0maws_instance.slave (remote-exec): + sudo -E sh -c 'echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu trusty edge" > /etc/apt/sources.list.d/docker.list'
+[0m[1maws_instance.slave: Still creating... (1m10s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): + '[' ubuntu = debian ']'
+[0m[0maws_instance.slave (remote-exec): + sudo -E sh -c 'apt-get update -qq >/dev/null'
+[0m[1maws_instance.slave: Still creating... (1m20s elapsed)[0m[0m
+[0m[1maws_instance.slave: Still creating... (1m30s elapsed)[0m[0m
+[0m[1maws_instance.slave: Still creating... (1m40s elapsed)[0m[0m
+[0m[1maws_instance.slave: Still creating... (1m50s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): + sudo -E sh -c 'apt-get install -y -qq --no-install-recommends docker-ce >/dev/null'
+[0m[1maws_instance.slave: Still creating... (2m0s elapsed)[0m[0m
+[0m[1maws_instance.slave: Still creating... (2m10s elapsed)[0m[0m
+[0m[1maws_instance.slave: Still creating... (2m20s elapsed)[0m[0m
+[0m[1maws_instance.slave: Still creating... (2m30s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): + sudo -E sh -c 'docker version'
+[0m[1maws_instance.slave: Still creating... (2m40s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): Client:
+[0m[0maws_instance.slave (remote-exec):  Version:           18.06.0-ce
+[0m[0maws_instance.slave (remote-exec):  API version:       1.38
+[0m[0maws_instance.slave (remote-exec):  Go version:        go1.10.3
+[0m[0maws_instance.slave (remote-exec):  Git commit:        0ffa825
+[0m[0maws_instance.slave (remote-exec):  Built:             Wed Jul 18 19:10:22 2018
+[0m[0maws_instance.slave (remote-exec):  OS/Arch:           linux/amd64
+[0m[0maws_instance.slave (remote-exec):  Experimental:      false
+[0m[0m
+[0m[0maws_instance.slave (remote-exec): Server:
+[0m[0maws_instance.slave (remote-exec):  Engine:
+[0m[0maws_instance.slave (remote-exec):   Version:          18.06.0-ce
+[0m[0maws_instance.slave (remote-exec):   API version:      1.38 (minimum version 1.12)
+[0m[0maws_instance.slave (remote-exec):   Go version:       go1.10.3
+[0m[0maws_instance.slave (remote-exec):   Git commit:       0ffa825
+[0m[0maws_instance.slave (remote-exec):   Built:            Wed Jul 18 19:08:26 2018
+[0m[0maws_instance.slave (remote-exec):   OS/Arch:          linux/amd64
+[0m[0maws_instance.slave (remote-exec):   Experimental:     false
+[0m[0maws_instance.slave (remote-exec): If you would like to use Docker as a non-root user, you should now consider
+[0m[0maws_instance.slave (remote-exec): adding your user to the "docker" group with something like:
+[0m[0m
+[0m[0maws_instance.slave (remote-exec):   sudo usermod -aG docker ubuntu
+[0m[0m
+[0m[0maws_instance.slave (remote-exec): Remember that you will have to log out and back in for this to take effect!
+[0m[0m
+[0m[0maws_instance.slave (remote-exec): WARNING: Adding a user to the "docker" group will grant the ability to run
+[0m[0maws_instance.slave (remote-exec):          containers which can be used to obtain root privileges on the
+[0m[0maws_instance.slave (remote-exec):          docker host.
+[0m[0maws_instance.slave (remote-exec):          Refer to https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
+[0m[0maws_instance.slave (remote-exec):          for more information.
+[0m[0maws_instance.slave (remote-exec): start: Job is already running: docker
+[0m[0maws_instance.slave (remote-exec): Reading package lists... 0%
+aws_instance.slave (remote-exec): Reading package lists... 100%
+aws_instance.slave (remote-exec): Reading package lists... Done
+[0m[0maws_instance.slave (remote-exec): Building dependency tree... 0%
+aws_instance.slave (remote-exec): Building dependency tree... 0%
+[0m[0maws_instance.slave (remote-exec): Building dependency tree... 1%
+aws_instance.slave (remote-exec): Building dependency tree... 50%
+aws_instance.slave (remote-exec): Building dependency tree... 50%
+[0m[0maws_instance.slave (remote-exec): Building dependency tree
+[0m[0maws_instance.slave (remote-exec): Reading state information... 0%
+aws_instance.slave (remote-exec): Reading state information... 7%
+aws_instance.slave (remote-exec): Reading state information... Done
+[0m[0maws_instance.slave (remote-exec): The following extra packages will be installed:
+[0m[0maws_instance.slave (remote-exec):   git-man liberror-perl
+[0m[0maws_instance.slave (remote-exec): Suggested packages:
+[0m[0maws_instance.slave (remote-exec):   git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+[0m[0maws_instance.slave (remote-exec):   gitweb git-arch git-bzr git-cvs git-mediawiki git-svn
+[0m[0maws_instance.slave (remote-exec): The following NEW packages will be installed:
+[0m[0maws_instance.slave (remote-exec):   git git-man liberror-perl
+[0m[0maws_instance.slave (remote-exec): 0 upgraded, 3 newly installed, 0 to remove and 172 not upgraded.
+[0m[0maws_instance.slave (remote-exec): Need to get 3,394 kB of archives.
+[0m[0maws_instance.slave (remote-exec): After this operation, 22.0 MB of additional disk space will be used.
+[0m[0maws_instance.slave (remote-exec): 0% [Working]
+aws_instance.slave (remote-exec): Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main liberror-perl all 0.17-1.1 [21.1 kB]
+[0m[0maws_instance.slave (remote-exec): 0% [1 liberror-perl 0 B/21.1 kB 0%]
+aws_instance.slave (remote-exec): 1% [Working]
+aws_instance.slave (remote-exec): Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main git-man all 1:1.9.1-1ubuntu0.8 [701 kB]
+[0m[0maws_instance.slave (remote-exec): 1% [2 git-man 0 B/701 kB 0%]
+aws_instance.slave (remote-exec): 21% [Working]
+aws_instance.slave (remote-exec): Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main git amd64 1:1.9.1-1ubuntu0.8 [2,672 kB]
+[0m[0maws_instance.slave (remote-exec): 21% [3 git 0 B/2,672 kB 0%]
+[0m[0maws_instance.slave (remote-exec): 100% [Working]
+aws_instance.slave (remote-exec): Fetched 3,394 kB in 0s (20.6 MB/s)
+[0m[0maws_instance.slave (remote-exec): Selecting previously unselected package liberror-perl.
+[0m[0maws_instance.slave (remote-exec): (Reading database ...
+aws_instance.slave (remote-exec): (Reading database ... 5%
+aws_instance.slave (remote-exec): (Reading database ... 10%
+aws_instance.slave (remote-exec): (Reading database ... 15%
+aws_instance.slave (remote-exec): (Reading database ... 20%
+aws_instance.slave (remote-exec): (Reading database ... 25%
+aws_instance.slave (remote-exec): (Reading database ... 30%
+aws_instance.slave (remote-exec): (Reading database ... 35%
+aws_instance.slave (remote-exec): (Reading database ... 40%
+aws_instance.slave (remote-exec): (Reading database ... 45%
+aws_instance.slave (remote-exec): (Reading database ... 50%
+aws_instance.slave (remote-exec): (Reading database ... 55%
+aws_instance.slave (remote-exec): (Reading database ... 60%
+aws_instance.slave (remote-exec): (Reading database ... 65%
+aws_instance.slave (remote-exec): (Reading database ... 70%
+aws_instance.slave (remote-exec): (Reading database ... 75%
+aws_instance.slave (remote-exec): (Reading database ... 80%
+aws_instance.slave (remote-exec): (Reading database ... 85%
+aws_instance.slave (remote-exec): (Reading database ... 90%
+aws_instance.slave (remote-exec): (Reading database ... 95%
+aws_instance.slave (remote-exec): (Reading database ... 100%
+aws_instance.slave (remote-exec): (Reading database ... 51373 files and directories currently installed.)
+[0m[0maws_instance.slave (remote-exec): Preparing to unpack .../liberror-perl_0.17-1.1_all.deb ...
+[0m[0maws_instance.slave (remote-exec): Unpacking liberror-perl (0.17-1.1) ...
+[0m[0maws_instance.slave (remote-exec): Selecting previously unselected package git-man.
+[0m[0maws_instance.slave (remote-exec): Preparing to unpack .../git-man_1%3a1.9.1-1ubuntu0.8_all.deb ...
+[0m[0maws_instance.slave (remote-exec): Unpacking git-man (1:1.9.1-1ubuntu0.8) ...
+[0m[0maws_instance.slave (remote-exec): Selecting previously unselected package git.
+[0m[0maws_instance.slave (remote-exec): Preparing to unpack .../git_1%3a1.9.1-1ubuntu0.8_amd64.deb ...
+[0m[0maws_instance.slave (remote-exec): Unpacking git (1:1.9.1-1ubuntu0.8) ...
+[0m[0maws_instance.slave (remote-exec): Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+[0m[0maws_instance.slave (remote-exec): Setting up liberror-perl (0.17-1.1) ...
+[0m[0maws_instance.slave (remote-exec): Setting up git-man (1:1.9.1-1ubuntu0.8) ...
+[0m[0maws_instance.slave (remote-exec): Setting up git (1:1.9.1-1ubuntu0.8) ...
+[0m[1maws_instance.slave: Still creating... (2m50s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): Using default tag: latest
+[0m[0maws_instance.slave (remote-exec): latest: Pulling from jenkinsimage/jenkins_slave
+[0m[0m
+[0m[0maws_instance.slave (remote-exec): [1A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Pulling fs layer
+aws_instance.slave (remote-exec): [1B
+[0m[0maws_instance.slave (remote-exec): [1A[1K[K
+aws_instance.slave (remote-exec): e2de79c11866: Pulling fs layer
+aws_instance.slave (remote-exec): [1B
+[0m[0maws_instance.slave (remote-exec): [1A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Pulling fs layer
+aws_instance.slave (remote-exec): [1B
+[0m[0maws_instance.slave (remote-exec): [1A[1K[K
+aws_instance.slave (remote-exec): 6894f5827306: Pulling fs layer
+aws_instance.slave (remote-exec): [1B
+[0m[0maws_instance.slave (remote-exec): [1A[1K[K
+aws_instance.slave (remote-exec): a0fe4cb56c49: Pulling fs layer
+aws_instance.slave (remote-exec): [1B
+[0m[0maws_instance.slave (remote-exec): [1A[1K[K
+aws_instance.slave (remote-exec): d3c75476ec0c: Pulling fs layer
+aws_instance.slave (remote-exec): [1B[3A[1K[K
+aws_instance.slave (remote-exec): 6894f5827306: Waiting
+aws_instance.slave (remote-exec): [3B[2A[1K[K
+aws_instance.slave (remote-exec): a0fe4cb56c49: Waiting
+aws_instance.slave (remote-exec): [2B[1A[1K[K
+aws_instance.slave (remote-exec): d3c75476ec0c: Waiting
+aws_instance.slave (remote-exec): [1B
+[0m[0maws_instance.slave (remote-exec): [5A[1K[K
+aws_instance.slave (remote-exec): e2de79c11866: Downloading  16.36kB/484.5kB
+aws_instance.slave (remote-exec): [5B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  538.1kB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [5A[1K[K
+aws_instance.slave (remote-exec): e2de79c11866: Downloading  329.3kB/484.5kB
+aws_instance.slave (remote-exec): [5B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  1.078MB/74.69MB
+aws_instance.slave (remote-exec): [6B[5A[1K[K
+aws_instance.slave (remote-exec): e2de79c11866: Downloading  484.5kB/484.5kB
+aws_instance.slave (remote-exec): [5B[5A[1K[K
+aws_instance.slave (remote-exec): e2de79c11866: Verifying Checksum
+aws_instance.slave (remote-exec): [5B[5A[1K[K
+aws_instance.slave (remote-exec): e2de79c11866: Download complete
+aws_instance.slave (remote-exec): [5B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  538.1kB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  1.617MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  1.078MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  2.697MB/74.69MB
+aws_instance.slave (remote-exec): [6B[3A[1K[K
+aws_instance.slave (remote-exec): 6894f5827306: Downloading  2.023kB/2.023kB
+aws_instance.slave (remote-exec): [3B[3A[1K[K
+aws_instance.slave (remote-exec): 6894f5827306: Verifying Checksum
+aws_instance.slave (remote-exec): [3B[3A[1K[K
+aws_instance.slave (remote-exec): 6894f5827306: Download complete
+aws_instance.slave (remote-exec): [3B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  1.617MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  3.236MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  2.157MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  4.316MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  2.697MB/79.39MB
+aws_instance.slave (remote-exec): [4B[2A[1K[K
+aws_instance.slave (remote-exec): a0fe4cb56c49: Downloading  1.938kB/1.938kB
+aws_instance.slave (remote-exec): [2B[2A[1K[K
+aws_instance.slave (remote-exec): a0fe4cb56c49: Verifying Checksum
+aws_instance.slave (remote-exec): [2B[2A[1K[K
+aws_instance.slave (remote-exec): a0fe4cb56c49: Download complete
+aws_instance.slave (remote-exec): [2B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  5.395MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  3.236MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  5.935MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  3.776MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  7.014MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  4.316MB/79.39MB
+aws_instance.slave (remote-exec): [4B[1A[1K[K
+aws_instance.slave (remote-exec): d3c75476ec0c: Downloading     161B/161B
+aws_instance.slave (remote-exec): [1B[1A[1K[K
+aws_instance.slave (remote-exec): d3c75476ec0c: Verifying Checksum
+aws_instance.slave (remote-exec): [1B[1A[1K[K
+aws_instance.slave (remote-exec): d3c75476ec0c: Download complete
+aws_instance.slave (remote-exec): [1B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  4.855MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  8.093MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  9.172MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  5.935MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  10.25MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  6.474MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  11.33MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  7.014MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  12.41MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  8.093MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  13.49MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  9.172MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  14.57MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  15.65MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  10.25MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  10.79MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  16.73MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  17.81MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  11.87MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  12.41MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  18.89MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  19.97MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  13.49MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  21.04MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  14.57MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  22.12MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  15.11MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading   23.2MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  15.65MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  24.28MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  25.36MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  16.73MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  17.27MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  26.44MB/74.69MB
+aws_instance.slave (remote-exec): [6B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  27.52MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  18.35MB/79.39MB
+aws_instance.slave (remote-exec): [4B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  18.89MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading   28.6MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  29.68MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  19.97MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading   31.3MB/74.69MB
+aws_instance.slave (remote-exec): [6B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  32.38MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  21.04MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  21.58MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  33.46MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  22.12MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  34.54MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading   23.2MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  35.62MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  23.74MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  36.69MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  24.82MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  37.77MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading   25.9MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  38.85MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  39.93MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  26.98MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[1maws_instance.slave: Still creating... (3m0s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  41.01MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  28.06MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  42.07MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  29.14MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  42.61MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  30.22MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading   43.7MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  44.78MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading   31.3MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  45.86MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  32.38MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading   46.4MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  33.46MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  47.48MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading     34MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  48.02MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  35.08MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading   49.1MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  36.16MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  50.18MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  51.25MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  37.24MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  52.33MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  38.32MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  52.87MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  39.39MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  53.95MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  39.93MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  55.03MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  41.01MB/79.39MB
+aws_instance.slave (remote-exec): [4B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  41.55MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  56.11MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  42.63MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading   57.2MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  43.71MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  58.28MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading   44.8MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  59.36MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  45.88MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  60.42MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  46.42MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  60.96MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  46.96MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  62.05MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  48.04MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  63.13MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  48.56MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  49.65MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  64.21MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  50.19MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  65.29MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  51.27MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  66.37MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  51.81MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  66.91MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  52.89MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  67.99MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  53.97MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  68.53MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  54.51MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading   69.6MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  55.59MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  70.68MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  56.13MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  71.76MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  57.21MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  58.28MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  72.84MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  58.82MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  73.92MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Downloading  74.46MB/74.69MB
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  59.36MB/79.39MB
+aws_instance.slave (remote-exec): [4B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Verifying Checksum
+aws_instance.slave (remote-exec): [6B[6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Download complete
+aws_instance.slave (remote-exec): [6B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  60.44MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  61.52MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading   62.6MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  64.23MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  65.85MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  67.45MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  69.08MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading   70.7MB/79.39MB
+aws_instance.slave (remote-exec): [4B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  71.78MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading   73.4MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  75.02MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  76.63MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  77.71MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Downloading  78.79MB/79.39MB
+aws_instance.slave (remote-exec): [4B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Verifying Checksum
+aws_instance.slave (remote-exec): [4B[4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Download complete
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  557.1kB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  1.114MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  1.671MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  2.228MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  2.785MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  3.342MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[1maws_instance.slave: Still creating... (3m10s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  3.899MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  4.456MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  5.014MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  5.571MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  6.128MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  6.685MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  7.242MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  7.799MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  8.356MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  8.913MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting   9.47MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  10.03MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  10.58MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  11.14MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting   11.7MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  12.26MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  12.81MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  13.37MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  13.93MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  14.48MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  15.04MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting   15.6MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  16.15MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  16.71MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  17.27MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  17.83MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  18.38MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  18.94MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting   19.5MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[1maws_instance.slave: Still creating... (3m20s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  20.05MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  20.61MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  21.17MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  21.73MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  22.28MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  22.84MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting   23.4MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  23.95MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  24.51MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  25.07MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  25.62MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  26.18MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  26.74MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting   27.3MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  27.85MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  28.41MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  28.97MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  29.52MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  30.08MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  30.64MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting   31.2MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  31.75MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  32.31MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  32.87MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  33.42MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  33.98MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[1maws_instance.slave: Still creating... (3m30s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  34.54MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  35.09MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  35.65MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  36.21MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  36.77MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  37.32MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  37.88MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  38.44MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  38.99MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  39.55MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  40.11MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  40.67MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  41.22MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  41.78MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  42.34MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  42.89MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  43.45MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  44.01MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  44.56MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  45.12MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  45.68MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  46.24MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  46.79MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  47.35MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  47.91MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[1maws_instance.slave: Still creating... (3m40s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  48.46MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  49.02MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  49.58MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  50.14MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  50.69MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  51.25MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  51.81MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  52.36MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  52.92MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  53.48MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  54.03MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  54.59MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  55.15MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  55.71MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  56.26MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  56.82MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  57.38MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  57.93MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[1maws_instance.slave: Still creating... (3m50s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  58.49MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  59.05MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting   59.6MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  60.16MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  60.72MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  61.28MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  61.83MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  62.39MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  62.95MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting   63.5MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  64.06MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  64.62MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  65.18MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  65.73MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  66.29MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  66.85MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting   67.4MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  67.96MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[1maws_instance.slave: Still creating... (4m0s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  68.52MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  69.07MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  69.63MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  70.19MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  70.75MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting   71.3MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  71.86MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  72.42MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  72.97MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  73.53MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  74.09MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  74.65MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Extracting  74.69MB/74.69MB
+aws_instance.slave (remote-exec): [6B
+[0m[1maws_instance.slave: Still creating... (4m10s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [6A[1K[K
+aws_instance.slave (remote-exec): 7dc0dca2b151: Pull complete
+aws_instance.slave (remote-exec): [6B[5A[1K[K
+aws_instance.slave (remote-exec): e2de79c11866: Extracting  32.77kB/484.5kB
+aws_instance.slave (remote-exec): [5B
+[0m[0maws_instance.slave (remote-exec): [5A[1K[K
+aws_instance.slave (remote-exec): e2de79c11866: Extracting  65.54kB/484.5kB
+aws_instance.slave (remote-exec): [5B
+[0m[0maws_instance.slave (remote-exec): [5A[1K[K
+aws_instance.slave (remote-exec): e2de79c11866: Extracting  229.4kB/484.5kB
+aws_instance.slave (remote-exec): [5B
+[0m[0maws_instance.slave (remote-exec): [5A[1K[K
+aws_instance.slave (remote-exec): e2de79c11866: Extracting  262.1kB/484.5kB
+aws_instance.slave (remote-exec): [5B
+[0m[0maws_instance.slave (remote-exec): [5A[1K[K
+aws_instance.slave (remote-exec): e2de79c11866: Extracting  484.5kB/484.5kB
+aws_instance.slave (remote-exec): [5B
+[0m[0maws_instance.slave (remote-exec): [5A[1K[K
+aws_instance.slave (remote-exec): e2de79c11866: Pull complete
+aws_instance.slave (remote-exec): [5B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  557.1kB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  1.114MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  1.671MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A
+[0m[0maws_instance.slave (remote-exec): [1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  2.228MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  2.785MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  3.342MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  3.899MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  4.456MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  5.014MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  5.571MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  6.128MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  6.685MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  7.242MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  7.799MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  8.356MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  8.913MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   9.47MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  10.03MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  10.58MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  11.14MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[1maws_instance.slave: Still creating... (4m20s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   11.7MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  12.26MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  12.81MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  13.37MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  13.93MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  14.48MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  15.04MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   15.6MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  16.15MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  16.71MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  17.27MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  17.83MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  18.38MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  18.94MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   19.5MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  20.05MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  20.61MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  21.17MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  21.73MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  22.28MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  22.84MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   23.4MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  23.95MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  24.51MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  25.07MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  25.62MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  26.18MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  26.74MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   27.3MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  27.85MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  28.41MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  28.97MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  29.52MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  30.08MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  30.64MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[1maws_instance.slave: Still creating... (4m30s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   31.2MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  31.75MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  32.31MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  32.87MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  33.42MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  33.98MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  34.54MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  35.09MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  35.65MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  36.21MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  36.77MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  37.32MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  37.88MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  38.44MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  38.99MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  39.55MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  40.11MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  40.67MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  41.22MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  41.78MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  42.34MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  42.89MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  43.45MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  44.01MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  44.56MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  45.12MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  45.68MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  46.24MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  46.79MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[1maws_instance.slave: Still creating... (4m40s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  47.35MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  47.91MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  48.46MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  49.02MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  49.58MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  50.14MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  50.69MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  51.25MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  51.81MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  52.36MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  52.92MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  53.48MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  54.03MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  54.59MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  55.15MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  55.71MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  56.26MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  56.82MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  57.38MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  57.93MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  58.49MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  59.05MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   59.6MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  60.16MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  60.72MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  61.28MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[1maws_instance.slave: Still creating... (4m50s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  61.83MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  62.39MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  62.95MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   63.5MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  64.06MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  64.62MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  65.18MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  65.73MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  66.29MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  66.85MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   67.4MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  67.96MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  68.52MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  69.07MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  69.63MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  70.19MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  70.75MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   71.3MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  71.86MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  72.42MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[1maws_instance.slave: Still creating... (5m0s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  72.97MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  73.53MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  74.09MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  74.65MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   75.2MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  75.76MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  76.32MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  76.87MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  77.43MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  77.99MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  78.54MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting   79.1MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Extracting  79.39MB/79.39MB
+aws_instance.slave (remote-exec): [4B
+[0m[0maws_instance.slave (remote-exec): [4A[1K[K
+aws_instance.slave (remote-exec): 76a3a780c472: Pull complete
+aws_instance.slave (remote-exec): [4B[3A[1K[K
+aws_instance.slave (remote-exec): 6894f5827306: Extracting  2.023kB/2.023kB
+aws_instance.slave (remote-exec): [3B
+[0m[1maws_instance.slave: Still creating... (5m10s elapsed)[0m[0m
+[0m[0maws_instance.slave (remote-exec): [3A[1K[K
+aws_instance.slave (remote-exec): 6894f5827306: Extracting  2.023kB/2.023kB
+aws_instance.slave (remote-exec): [3B
+[0m[0maws_instance.slave (remote-exec): [3A[1K[K
+aws_instance.slave (remote-exec): 6894f5827306: Pull complete
+aws_instance.slave (remote-exec): [3B[2A[1K[K
+aws_instance.slave (remote-exec): a0fe4cb56c49: Extracting  1.938kB/1.938kB
+aws_instance.slave (remote-exec): [2B
+[0m[0maws_instance.slave (remote-exec): [2A[1K[K
+aws_instance.slave (remote-exec): a0fe4cb56c49: Extracting  1.938kB/1.938kB
+aws_instance.slave (remote-exec): [2B
+[0m[0maws_instance.slave (remote-exec): [2A[1K[K
+aws_instance.slave (remote-exec): a0fe4cb56c49: Pull complete
+aws_instance.slave (remote-exec): [2B[1A[1K[K
+aws_instance.slave (remote-exec): d3c75476ec0c: Extracting     161B/161B
+aws_instance.slave (remote-exec): [1B[1A[1K[K
+aws_instance.slave (remote-exec): d3c75476ec0c: Extracting     161B/161B
+aws_instance.slave (remote-exec): [1B
+[0m[0maws_instance.slave (remote-exec): [1A[1K[K
+aws_instance.slave (remote-exec): d3c75476ec0c: Pull complete
+aws_instance.slave (remote-exec): [1BDigest: sha256:73f51cd153542d2ab26002175956b04c85ca982a71cbd64bda64912df93ba5dd
+[0m[0maws_instance.slave (remote-exec): Status: Downloaded newer image for jenkinsimage/jenkins_slave:latest
+[0m[1maws_instance.slave: Creation complete after 5m14s (ID: i-0e8fa5bfafd63ebd3)[0m[0m
+[0m[1m[32m
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.[0m
+[0m[1m[32m
+Outputs:
+
+ip = 172.31.60.147[0m
