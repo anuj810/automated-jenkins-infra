@@ -12,8 +12,8 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 cd automated-jenkins
 image=test
-slave=1
-ip=172.31.60.147
+slave=0
+ip=null
 
 if [ $slave -eq 1 ]
 then
