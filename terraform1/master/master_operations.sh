@@ -30,6 +30,7 @@ sed -i s'/docker_slave_template_config/docker_java_slave_config/g' jenkins-maste
 elif [ $image == "android" ]
 then
 sed -i s"/slave_image/android/" makefile
+echo 'mkdir -p jobs/test-android-job ; mv test_android_job.xml jobs/test-android-job/config.xml'  >> jenkins-master/change.sh
 if [ $slave -eq 0 ]
 then
 sudo make pull
